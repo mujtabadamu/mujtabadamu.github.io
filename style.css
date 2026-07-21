@@ -234,7 +234,11 @@ main {
 .card-links {
   display: flex;
   gap: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .timeline {
