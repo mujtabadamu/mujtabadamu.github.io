@@ -5,35 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mujtaba Adamu — Frontend &amp; Mobile Engineer</title>
   <meta name="description" content="Portfolio of Mujtaba Adamu, Frontend &amp; Mobile Engineer specializing in React and React Native." />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mujtaba Adamu — Frontend &amp; Mobile Engineer" />
+  <meta property="og:description" content="React, React Native &amp; TypeScript specialist building high-performance web and mobile products." />
+  <meta property="og:url" content="https://mujtabadamu.github.io" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#top">Mujtaba Adamu</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+
+  <header class="nav" id="site-nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark">MA</span>
+      <span class="brand-name">Mujtaba Adamu</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#contact" data-nav>Contact</a>
     </nav>
-    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button type="button" id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button type="button" class="icon-btn nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#contact" data-nav>Contact</a>
+  </div>
 
   <main id="top">
     <section class="hero">
-      <h1>Hi, I'm <span class="accent">Mujtaba Adamu</span></h1>
-      <p class="subtitle">Frontend &amp; Mobile Engineer · Full Stack Developer · React &amp; React Native Specialist</p>
-      <p class="tagline">Based in Abuja, Nigeria. I build scalable, high-performance web and mobile apps with React, React Native, and TypeScript.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="grain"></span>
       </div>
+
+      <div class="hero-content">
+        <p class="eyebrow reveal">Frontend &amp; Mobile Engineer</p>
+        <h1 class="reveal" style="--d:1">
+          Hi, I'm <span class="gradient-text">Mujtaba Adamu</span>
+        </h1>
+        <p class="subtitle reveal" style="--d:2">
+          Full Stack Developer · React &amp; React Native Specialist
+        </p>
+        <p class="tagline reveal" style="--d:3">
+          Based in Abuja, Nigeria. I build scalable, high-performance web and mobile apps
+          with React, React Native, and TypeScript — used by thousands of people every day.
+        </p>
+        <div class="cta reveal" style="--d:4">
+          <a class="btn btn-primary magnetic" href="#projects">View Projects</a>
+          <a class="btn btn-secondary magnetic" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-meta reveal" style="--d:5">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to freelance &amp; contract work
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <span></span>
+      </a>
     </section>
 
     <section id="about" class="section">
-      <h2>About</h2>
-      <p>
+      <p class="kicker reveal">Who I am</p>
+      <h2 class="reveal">About</h2>
+      <p class="lede reveal">
         I'm a Frontend &amp; Mobile Engineer with a BTECH in Computer Science from Modibbo Adama
         University of Technology, Yola. Since 2020 I've built high-performance web and mobile
         products used by thousands of people — from EdTech platforms serving students and
@@ -44,8 +104,9 @@
     </section>
 
     <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="skills-list">
+      <p class="kicker reveal">What I work with</p>
+      <h2 class="reveal">Skills</h2>
+      <ul class="skills-list reveal">
         <li>JavaScript</li>
         <li>TypeScript</li>
         <li>React.js</li>
@@ -65,116 +126,149 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <p class="kicker reveal">Selected work</p>
+      <h2 class="reveal">Projects</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card spotlight reveal">
           <h3>Saflearn &amp; SAFRecords</h3>
           <p>
             High-performance web apps used by thousands of students and educators across Nigeria.
             Built a referral system that grew user acquisition by 35% and retention by 20%, and
             optimized REST APIs with caching to cut latency by over 60%.
           </p>
-          <div class="card-links">
-            <span>FlexiSAF Edusoft Limited</span>
+          <div class="tags">
+            <span>React</span><span>Redux Toolkit</span><span>REST APIs</span>
           </div>
+          <div class="card-org">FlexiSAF Edusoft Limited</div>
         </article>
-        <article class="card">
+        <article class="card spotlight reveal">
           <h3>AmeerAi</h3>
           <p>
             AI-powered news &amp; research platform with intelligent content aggregation,
             engagement analytics, a recommendation engine, and an AI research assistant for
             contextual topic analysis. Reduced response latency by over 40%.
           </p>
-          <div class="card-links">
-            <span>Daalitech</span>
+          <div class="tags">
+            <span>React</span><span>AI Integration</span><span>Analytics</span>
           </div>
+          <div class="card-org">Daalitech</div>
         </article>
-        <article class="card">
+        <article class="card spotlight reveal">
           <h3>TradelyX</h3>
           <p>
             B2B digital supply chain platform. Built core trade and procurement modules,
             RFQ/RFP workflows, and in-app buyer-seller messaging, plus pricing and analytics
             features supporting data-driven decisions.
           </p>
-          <div class="card-links">
-            <span>TradelyX Ltd</span>
+          <div class="tags">
+            <span>React</span><span>TypeScript</span><span>RESTful APIs</span>
           </div>
+          <div class="card-org">TradelyX Ltd</div>
         </article>
-        <article class="card">
+        <article class="card spotlight reveal">
           <h3>Geospatial Data Visualization</h3>
           <p>
             Interactive map features built with MapLibre GL JS for visualizing large datasets,
             with a reusable React component architecture that improved consistency across the
             frontend.
           </p>
-          <div class="card-links">
-            <span>Digital Engineering Limited</span>
+          <div class="tags">
+            <span>React</span><span>MapLibre GL JS</span><span>TypeScript</span>
           </div>
+          <div class="card-org">Digital Engineering Limited</div>
         </article>
       </div>
     </section>
 
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <p class="kicker reveal">Career</p>
+      <h2 class="reveal">Experience</h2>
       <ol class="timeline">
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Feb 2026 — Present</div>
           <div class="timeline-body">
             <h3>Frontend Engineer</h3>
-            <p>Digital Engineering Limited (Contractor) — Delivered 15+ production-ready features with React.js and TypeScript, built reusable component architecture, and shipped interactive geospatial features with MapLibre GL JS.</p>
+            <p class="timeline-org">Digital Engineering Limited (Contractor)</p>
+            <p>Delivered 15+ production-ready features with React.js and TypeScript, built reusable component architecture, and shipped interactive geospatial features with MapLibre GL JS.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Nov 2025 — Jan 2026</div>
           <div class="timeline-body">
             <h3>Frontend Engineer</h3>
-            <p>Touch iT Limited — Built responsive, user-friendly interfaces across web and mobile, optimizing for performance, scalability, and accessibility.</p>
+            <p class="timeline-org">Touch iT Limited</p>
+            <p>Built responsive, user-friendly interfaces across web and mobile, optimizing for performance, scalability, and accessibility.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Dec 2024 — Present</div>
           <div class="timeline-body">
             <h3>Software Engineer</h3>
-            <p>TradelyX Ltd — Built core trade and procurement modules, RFQ/RFP workflows, in-app messaging, and pricing/analytics features for a B2B digital supply chain platform.</p>
+            <p class="timeline-org">TradelyX Ltd</p>
+            <p>Built core trade and procurement modules, RFQ/RFP workflows, in-app messaging, and pricing/analytics features for a B2B digital supply chain platform.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Nov 2024 — Dec 2025</div>
           <div class="timeline-body">
             <h3>Software Engineer</h3>
-            <p>Daalitech — Built AmeerAi, an AI-powered news &amp; research platform, including a recommendation engine and AI research assistant, cutting response latency by over 40%.</p>
+            <p class="timeline-org">Daalitech</p>
+            <p>Built AmeerAi, an AI-powered news &amp; research platform, including a recommendation engine and AI research assistant, cutting response latency by over 40%.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">2023 — Nov 2024</div>
           <div class="timeline-body">
             <h3>React &amp; React Native Developer</h3>
-            <p>Lellall — Developed responsive, performant web and mobile apps, improving load speed and navigation flow by 25% across devices.</p>
+            <p class="timeline-org">Lellall</p>
+            <p>Developed responsive, performant web and mobile apps, improving load speed and navigation flow by 25% across devices.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
+          <div class="timeline-dot"></div>
           <div class="timeline-date">Jan 2020 — Present</div>
           <div class="timeline-body">
             <h3>Software Engineer</h3>
-            <p>FlexiSAF Edusoft Limited — Built Saflearn and SAFRecords, optimized REST APIs (60%+ latency reduction), implemented Redux Toolkit, and built a referral system that grew acquisition 35% and retention 20%.</p>
+            <p class="timeline-org">FlexiSAF Edusoft Limited</p>
+            <p>Built Saflearn and SAFRecords, optimized REST APIs (60%+ latency reduction), implemented Redux Toolkit, and built a referral system that grew acquisition 35% and retention 20%.</p>
           </div>
         </li>
+        <li class="timeline-line" aria-hidden="true"><span id="timeline-progress"></span></li>
       </ol>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Feel free to reach out — happy to connect.</p>
-      <div class="contact-links">
-        <a href="mailto:mujtabadamu@gmail.com">Email</a>
-        <a href="tel:+2348068279731">Phone</a>
-        <a href="https://github.com/mujtabadamu" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/mujtaba-adamu" target="_blank" rel="noopener">LinkedIn</a>
+    <section id="contact" class="section contact-section">
+      <p class="kicker reveal">Let's talk</p>
+      <h2 class="reveal">Get in touch</h2>
+      <p class="lede reveal">Feel free to reach out — happy to connect on new opportunities or collaborations.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:mujtabadamu@gmail.com" class="contact-link magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>
+          Email
+        </a>
+        <a href="tel:+2348068279731" class="contact-link magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Phone
+        </a>
+        <a href="https://github.com/mujtabadamu" target="_blank" rel="noopener" class="contact-link magnetic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mujtaba-adamu" target="_blank" rel="noopener" class="contact-link magnetic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          LinkedIn
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
+    <a href="#top" class="footer-top magnetic">Back to top ↑</a>
     <p>&copy; <span id="year"></span> Mujtaba Adamu. Built with HTML, CSS &amp; JS, hosted on GitHub Pages.</p>
   </footer>
 
