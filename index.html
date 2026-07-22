@@ -22,6 +22,7 @@
 <body>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-spotlight" aria-hidden="true"></div>
 
   <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
 
@@ -61,6 +62,7 @@
         <span class="blob blob-2"></span>
         <span class="blob blob-3"></span>
         <span class="grain"></span>
+        <canvas id="particle-canvas"></canvas>
       </div>
 
       <div class="hero-content">
@@ -88,6 +90,25 @@
       <a href="#about" class="scroll-cue" aria-label="Scroll to About">
         <span></span>
       </a>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stat reveal">
+        <span class="stat-number" data-target="6" data-suffix="+">0</span>
+        <span class="stat-label">Years experience</span>
+      </div>
+      <div class="stat reveal" style="--d:1">
+        <span class="stat-number" data-target="4" data-suffix="">0</span>
+        <span class="stat-label">Companies &amp; teams</span>
+      </div>
+      <div class="stat reveal" style="--d:2">
+        <span class="stat-number" data-target="35" data-suffix="%">0</span>
+        <span class="stat-label">Acquisition growth driven</span>
+      </div>
+      <div class="stat reveal" style="--d:3">
+        <span class="stat-number" data-target="60" data-suffix="%">0</span>
+        <span class="stat-label">API latency cut</span>
+      </div>
     </section>
 
     <section id="about" class="section">
@@ -129,7 +150,7 @@
       <p class="kicker reveal">Selected work</p>
       <h2 class="reveal">Projects</h2>
       <div class="cards">
-        <article class="card spotlight reveal">
+        <article class="card spotlight card-3d">
           <h3>Saflearn &amp; SAFRecords</h3>
           <p>
             High-performance web apps used by thousands of students and educators across Nigeria.
@@ -141,7 +162,7 @@
           </div>
           <div class="card-org">FlexiSAF Edusoft Limited</div>
         </article>
-        <article class="card spotlight reveal">
+        <article class="card spotlight card-3d">
           <h3>AmeerAi</h3>
           <p>
             AI-powered news &amp; research platform with intelligent content aggregation,
@@ -153,7 +174,7 @@
           </div>
           <div class="card-org">Daalitech</div>
         </article>
-        <article class="card spotlight reveal">
+        <article class="card spotlight card-3d">
           <h3>TradelyX</h3>
           <p>
             B2B digital supply chain platform. Built core trade and procurement modules,
@@ -165,7 +186,7 @@
           </div>
           <div class="card-org">TradelyX Ltd</div>
         </article>
-        <article class="card spotlight reveal">
+        <article class="card spotlight card-3d">
           <h3>Geospatial Data Visualization</h3>
           <p>
             Interactive map features built with MapLibre GL JS for visualizing large datasets,
