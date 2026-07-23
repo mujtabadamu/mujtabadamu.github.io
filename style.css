@@ -1,44 +1,44 @@
 :root {
-  --bg: #fbfbfd;
-  --bg-alt: #f2f3f7;
-  --text: #14141a;
-  --text-muted: #5c5c68;
-  --accent: #4f46e5;
-  --accent-2: #f97316;
+  --bg: #f9f9f7;
+  --bg-alt: #efeee9;
+  --text: #1a1a18;
+  --text-muted: #625f56;
+  --accent: #8a6d1f;
+  --accent-2: #3f4844;
   --accent-contrast: #ffffff;
-  --border: #e6e6ec;
+  --border: #e5e3db;
   --card-bg: #ffffff;
-  --shadow: 0 1px 3px rgba(20, 20, 30, 0.06), 0 1px 2px rgba(20, 20, 30, 0.04);
-  --shadow-lg: 0 20px 40px -12px rgba(20, 20, 30, 0.18);
+  --shadow: 0 1px 3px rgba(26, 26, 24, 0.06), 0 1px 2px rgba(26, 26, 24, 0.04);
+  --shadow-lg: 0 20px 40px -12px rgba(26, 26, 24, 0.18);
   --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root[data-theme="dark"] {
-  --bg: #0a0a0d;
-  --bg-alt: #131317;
-  --text: #f3f3f6;
-  --text-muted: #9a9aa5;
-  --accent: #818cf8;
-  --accent-2: #fb923c;
-  --accent-contrast: #0a0a0d;
-  --border: #232329;
-  --card-bg: #131317;
+  --bg: #0e0e0c;
+  --bg-alt: #171613;
+  --text: #f2f1ec;
+  --text-muted: #a6a297;
+  --accent: #c9a94a;
+  --accent-2: #8b978f;
+  --accent-contrast: #0e0e0c;
+  --border: #29271f;
+  --card-bg: #121210;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0a0a0d;
-    --bg-alt: #131317;
-    --text: #f3f3f6;
-    --text-muted: #9a9aa5;
-    --accent: #818cf8;
-    --accent-2: #fb923c;
-    --accent-contrast: #0a0a0d;
-    --border: #232329;
-    --card-bg: #131317;
+    --bg: #0e0e0c;
+    --bg-alt: #171613;
+    --text: #f2f1ec;
+    --text-muted: #a6a297;
+    --accent: #c9a94a;
+    --accent-2: #8b978f;
+    --accent-contrast: #0e0e0c;
+    --border: #29271f;
+    --card-bg: #121210;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 20px 40px -12px rgba(0, 0, 0, 0.6);
   }
